@@ -1,0 +1,69 @@
+re/15-nos# docker exec h0 ping -c 30 192.0.1.7
+PING 192.0.1.7 (192.0.1.7): 56 data bytes
+64 bytes from 192.0.1.7: seq=5 ttl=64 time=2242.440 ms
+64 bytes from 192.0.1.7: seq=4 ttl=64 time=3275.914 ms
+64 bytes from 192.0.1.7: seq=7 ttl=64 time=548.851 ms
+64 bytes from 192.0.1.7: seq=6 ttl=64 time=1562.029 ms
+64 bytes from 192.0.1.7: seq=8 ttl=64 time=5.752 ms
+64 bytes from 192.0.1.7: seq=9 ttl=64 time=1.138 ms
+64 bytes from 192.0.1.7: seq=10 ttl=64 time=1.181 ms
+64 bytes from 192.0.1.7: seq=11 ttl=64 time=1.915 ms
+64 bytes from 192.0.1.7: seq=12 ttl=64 time=1.085 ms
+64 bytes from 192.0.1.7: seq=13 ttl=64 time=1.392 ms
+64 bytes from 192.0.1.7: seq=14 ttl=64 time=2.199 ms
+64 bytes from 192.0.1.7: seq=15 ttl=64 time=1.125 ms
+64 bytes from 192.0.1.7: seq=16 ttl=64 time=2.270 ms
+64 bytes from 192.0.1.7: seq=17 ttl=64 time=2.781 ms
+64 bytes from 192.0.1.7: seq=18 ttl=64 time=1.938 ms
+64 bytes from 192.0.1.7: seq=19 ttl=64 time=1.262 ms
+64 bytes from 192.0.1.7: seq=20 ttl=64 time=1.156 ms
+64 bytes from 192.0.1.7: seq=21 ttl=64 time=1.142 ms
+64 bytes from 192.0.1.7: seq=22 ttl=64 time=1.128 ms
+64 bytes from 192.0.1.7: seq=23 ttl=64 time=1.053 ms
+64 bytes from 192.0.1.7: seq=24 ttl=64 time=1.667 ms
+64 bytes from 192.0.1.7: seq=25 ttl=64 time=1.051 ms
+64 bytes from 192.0.1.7: seq=26 ttl=64 time=2.536 ms
+64 bytes from 192.0.1.7: seq=27 ttl=64 time=1.431 ms
+64 bytes from 192.0.1.7: seq=28 ttl=64 time=1.494 ms
+64 bytes from 192.0.1.7: seq=29 ttl=64 time=1.030 ms
+
+--- 192.0.1.7 ping statistics ---
+30 packets transmitted, 26 packets received, 13% packet loss
+round-trip min/avg/max = 1.030/294.883/3275.914 ms
+root@antonio:/home/antonio/Documentos/topologias/docker/arvore/15-nos# docker exec h0 ping -c 30 192.0.1.5
+PING 192.0.1.5 (192.0.1.5): 56 data bytes
+64 bytes from 192.0.1.5: seq=0 ttl=64 time=3061.423 ms
+64 bytes from 192.0.1.5: seq=2 ttl=64 time=1169.071 ms
+64 bytes from 192.0.1.5: seq=3 ttl=64 time=184.232 ms
+64 bytes from 192.0.1.5: seq=1 ttl=64 time=2265.603 ms
+64 bytes from 192.0.1.5: seq=4 ttl=64 time=3.452 ms
+64 bytes from 192.0.1.5: seq=5 ttl=64 time=1.222 ms
+64 bytes from 192.0.1.5: seq=6 ttl=64 time=1.099 ms
+64 bytes from 192.0.1.5: seq=7 ttl=64 time=1.287 ms
+64 bytes from 192.0.1.5: seq=8 ttl=64 time=1.093 ms
+64 bytes from 192.0.1.5: seq=9 ttl=64 time=0.984 ms
+^[[A64 bytes from 192.0.1.5: seq=10 ttl=64 time=1.204 ms
+64 bytes from 192.0.1.5: seq=11 ttl=64 time=3.873 ms
+64 bytes from 192.0.1.5: seq=12 ttl=64 time=1.227 ms
+64 bytes from 192.0.1.5: seq=13 ttl=64 time=1.088 ms
+64 bytes from 192.0.1.5: seq=14 ttl=64 time=2.044 ms
+64 bytes from 192.0.1.5: seq=15 ttl=64 time=1.091 ms
+64 bytes from 192.0.1.5: seq=16 ttl=64 time=1.074 ms
+64 bytes from 192.0.1.5: seq=17 ttl=64 time=1.279 ms
+64 bytes from 192.0.1.5: seq=18 ttl=64 time=1.135 ms
+64 bytes from 192.0.1.5: seq=19 ttl=64 time=1.734 ms
+64 bytes from 192.0.1.5: seq=20 ttl=64 time=1.759 ms
+64 bytes from 192.0.1.5: seq=21 ttl=64 time=4.567 ms
+64 bytes from 192.0.1.5: seq=22 ttl=64 time=7.420 ms
+64 bytes from 192.0.1.5: seq=23 ttl=64 time=1.093 ms
+64 bytes from 192.0.1.5: seq=24 ttl=64 time=18.409 ms
+64 bytes from 192.0.1.5: seq=25 ttl=64 time=1.325 ms
+64 bytes from 192.0.1.5: seq=26 ttl=64 time=1.022 ms
+64 bytes from 192.0.1.5: seq=27 ttl=64 time=1.072 ms
+64 bytes from 192.0.1.5: seq=28 ttl=64 time=1.462 ms
+64 bytes from 192.0.1.5: seq=29 ttl=64 time=1.039 ms
+
+--- 192.0.1.5 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.984/224.812/3061.423 ms
+

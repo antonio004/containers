@@ -1,0 +1,37 @@
+root@antonio:/home/antonio/Documentos/topologias/docker/grade/9-nos/latencia# docker exec h0 ping -c 30 192.0.1.1
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+64 bytes from 192.0.1.1: seq=1 ttl=64 time=649.055 ms
+64 bytes from 192.0.1.1: seq=0 ttl=64 time=1748.334 ms
+64 bytes from 192.0.1.1: seq=2 ttl=64 time=79.387 ms
+64 bytes from 192.0.1.1: seq=3 ttl=64 time=8.271 ms
+64 bytes from 192.0.1.1: seq=4 ttl=64 time=0.813 ms
+64 bytes from 192.0.1.1: seq=5 ttl=64 time=0.886 ms
+64 bytes from 192.0.1.1: seq=6 ttl=64 time=7.992 ms
+64 bytes from 192.0.1.1: seq=7 ttl=64 time=0.893 ms
+64 bytes from 192.0.1.1: seq=8 ttl=64 time=1.019 ms
+64 bytes from 192.0.1.1: seq=9 ttl=64 time=0.949 ms
+64 bytes from 192.0.1.1: seq=10 ttl=64 time=1.086 ms
+64 bytes from 192.0.1.1: seq=11 ttl=64 time=1.298 ms
+64 bytes from 192.0.1.1: seq=12 ttl=64 time=1.026 ms
+64 bytes from 192.0.1.1: seq=13 ttl=64 time=0.884 ms
+64 bytes from 192.0.1.1: seq=14 ttl=64 time=0.919 ms
+64 bytes from 192.0.1.1: seq=15 ttl=64 time=1.014 ms
+64 bytes from 192.0.1.1: seq=16 ttl=64 time=0.972 ms
+64 bytes from 192.0.1.1: seq=17 ttl=64 time=1.067 ms
+64 bytes from 192.0.1.1: seq=18 ttl=64 time=0.967 ms
+64 bytes from 192.0.1.1: seq=19 ttl=64 time=0.965 ms
+64 bytes from 192.0.1.1: seq=20 ttl=64 time=1.105 ms
+64 bytes from 192.0.1.1: seq=21 ttl=64 time=0.977 ms
+64 bytes from 192.0.1.1: seq=22 ttl=64 time=0.961 ms
+64 bytes from 192.0.1.1: seq=23 ttl=64 time=1.358 ms
+64 bytes from 192.0.1.1: seq=24 ttl=64 time=0.926 ms
+64 bytes from 192.0.1.1: seq=25 ttl=64 time=0.900 ms
+64 bytes from 192.0.1.1: seq=26 ttl=64 time=0.962 ms
+64 bytes from 192.0.1.1: seq=27 ttl=64 time=0.772 ms
+64 bytes from 192.0.1.1: seq=28 ttl=64 time=0.915 ms
+64 bytes from 192.0.1.1: seq=29 ttl=64 time=0.909 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.772/83.919/1748.334 ms
+

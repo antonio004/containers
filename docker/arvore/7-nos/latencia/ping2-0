@@ -1,0 +1,37 @@
+re/7-nos# docker exec h2 ping -c 30 192.0.1.1
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+64 bytes from 192.0.1.1: seq=0 ttl=64 time=2295.593 ms
+64 bytes from 192.0.1.1: seq=2 ttl=64 time=412.856 ms
+64 bytes from 192.0.1.1: seq=1 ttl=64 time=1616.493 ms
+64 bytes from 192.0.1.1: seq=3 ttl=64 time=29.971 ms
+64 bytes from 192.0.1.1: seq=4 ttl=64 time=0.837 ms
+64 bytes from 192.0.1.1: seq=5 ttl=64 time=0.664 ms
+64 bytes from 192.0.1.1: seq=6 ttl=64 time=0.923 ms
+64 bytes from 192.0.1.1: seq=7 ttl=64 time=1.152 ms
+64 bytes from 192.0.1.1: seq=8 ttl=64 time=0.905 ms
+64 bytes from 192.0.1.1: seq=9 ttl=64 time=0.837 ms
+64 bytes from 192.0.1.1: seq=10 ttl=64 time=2.028 ms
+64 bytes from 192.0.1.1: seq=11 ttl=64 time=1.186 ms
+64 bytes from 192.0.1.1: seq=12 ttl=64 time=0.829 ms
+64 bytes from 192.0.1.1: seq=13 ttl=64 time=0.938 ms
+64 bytes from 192.0.1.1: seq=14 ttl=64 time=0.850 ms
+64 bytes from 192.0.1.1: seq=15 ttl=64 time=1.144 ms
+64 bytes from 192.0.1.1: seq=16 ttl=64 time=0.842 ms
+64 bytes from 192.0.1.1: seq=17 ttl=64 time=1.011 ms
+64 bytes from 192.0.1.1: seq=18 ttl=64 time=1.100 ms
+64 bytes from 192.0.1.1: seq=19 ttl=64 time=0.827 ms
+64 bytes from 192.0.1.1: seq=20 ttl=64 time=0.857 ms
+64 bytes from 192.0.1.1: seq=21 ttl=64 time=1.510 ms
+64 bytes from 192.0.1.1: seq=22 ttl=64 time=0.783 ms
+64 bytes from 192.0.1.1: seq=23 ttl=64 time=0.849 ms
+64 bytes from 192.0.1.1: seq=24 ttl=64 time=0.814 ms
+64 bytes from 192.0.1.1: seq=25 ttl=64 time=0.685 ms
+64 bytes from 192.0.1.1: seq=26 ttl=64 time=0.890 ms
+64 bytes from 192.0.1.1: seq=27 ttl=64 time=1.160 ms
+64 bytes from 192.0.1.1: seq=28 ttl=64 time=0.855 ms
+64 bytes from 192.0.1.1: seq=29 ttl=64 time=1.302 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.664/146.023/2295.593 ms
+

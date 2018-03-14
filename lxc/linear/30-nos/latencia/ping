@@ -1,0 +1,37 @@
+root@h0:/# ping -c 30 192.0.1.1
+PING 192.0.1.1 (192.0.1.1) 56(84) bytes of data.
+64 bytes from 192.0.1.1: icmp_seq=1 ttl=64 time=203 ms
+64 bytes from 192.0.1.1: icmp_seq=2 ttl=64 time=3.41 ms
+64 bytes from 192.0.1.1: icmp_seq=3 ttl=64 time=0.472 ms
+64 bytes from 192.0.1.1: icmp_seq=4 ttl=64 time=0.639 ms
+64 bytes from 192.0.1.1: icmp_seq=5 ttl=64 time=0.518 ms
+64 bytes from 192.0.1.1: icmp_seq=6 ttl=64 time=0.615 ms
+64 bytes from 192.0.1.1: icmp_seq=7 ttl=64 time=0.481 ms
+64 bytes from 192.0.1.1: icmp_seq=8 ttl=64 time=0.770 ms
+64 bytes from 192.0.1.1: icmp_seq=9 ttl=64 time=0.564 ms
+64 bytes from 192.0.1.1: icmp_seq=10 ttl=64 time=0.487 ms
+64 bytes from 192.0.1.1: icmp_seq=11 ttl=64 time=1.74 ms
+64 bytes from 192.0.1.1: icmp_seq=12 ttl=64 time=0.618 ms
+64 bytes from 192.0.1.1: icmp_seq=13 ttl=64 time=0.468 ms
+64 bytes from 192.0.1.1: icmp_seq=14 ttl=64 time=0.639 ms
+64 bytes from 192.0.1.1: icmp_seq=15 ttl=64 time=0.577 ms
+64 bytes from 192.0.1.1: icmp_seq=16 ttl=64 time=0.474 ms
+64 bytes from 192.0.1.1: icmp_seq=17 ttl=64 time=0.605 ms
+64 bytes from 192.0.1.1: icmp_seq=18 ttl=64 time=0.486 ms
+64 bytes from 192.0.1.1: icmp_seq=19 ttl=64 time=1.69 ms
+64 bytes from 192.0.1.1: icmp_seq=20 ttl=64 time=0.458 ms
+64 bytes from 192.0.1.1: icmp_seq=21 ttl=64 time=0.703 ms
+64 bytes from 192.0.1.1: icmp_seq=22 ttl=64 time=0.399 ms
+64 bytes from 192.0.1.1: icmp_seq=23 ttl=64 time=0.572 ms
+64 bytes from 192.0.1.1: icmp_seq=24 ttl=64 time=0.469 ms
+64 bytes from 192.0.1.1: icmp_seq=25 ttl=64 time=0.571 ms
+64 bytes from 192.0.1.1: icmp_seq=26 ttl=64 time=0.561 ms
+64 bytes from 192.0.1.1: icmp_seq=27 ttl=64 time=0.749 ms
+64 bytes from 192.0.1.1: icmp_seq=28 ttl=64 time=0.476 ms
+64 bytes from 192.0.1.1: icmp_seq=29 ttl=64 time=0.999 ms
+64 bytes from 192.0.1.1: icmp_seq=30 ttl=64 time=0.478 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 29558ms
+rtt min/avg/max/mdev = 0.399/7.517/203.806/36.454 ms
+

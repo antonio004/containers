@@ -1,0 +1,35 @@
+PING 192.0.1.10 (192.0.1.10): 56 data bytes
+64 bytes from 192.0.1.10: seq=0 ttl=64 time=1235.067 ms
+64 bytes from 192.0.1.10: seq=1 ttl=64 time=259.091 ms
+64 bytes from 192.0.1.10: seq=2 ttl=64 time=37.713 ms
+64 bytes from 192.0.1.10: seq=3 ttl=64 time=1.354 ms
+64 bytes from 192.0.1.10: seq=4 ttl=64 time=1.142 ms
+64 bytes from 192.0.1.10: seq=5 ttl=64 time=1.417 ms
+64 bytes from 192.0.1.10: seq=6 ttl=64 time=1.422 ms
+64 bytes from 192.0.1.10: seq=7 ttl=64 time=1.237 ms
+64 bytes from 192.0.1.10: seq=8 ttl=64 time=1.843 ms
+64 bytes from 192.0.1.10: seq=9 ttl=64 time=1.515 ms
+64 bytes from 192.0.1.10: seq=10 ttl=64 time=1.250 ms
+64 bytes from 192.0.1.10: seq=11 ttl=64 time=2.054 ms
+64 bytes from 192.0.1.10: seq=12 ttl=64 time=1.364 ms
+64 bytes from 192.0.1.10: seq=13 ttl=64 time=4.219 ms
+64 bytes from 192.0.1.10: seq=14 ttl=64 time=1.273 ms
+64 bytes from 192.0.1.10: seq=15 ttl=64 time=1.718 ms
+64 bytes from 192.0.1.10: seq=16 ttl=64 time=1.517 ms
+64 bytes from 192.0.1.10: seq=17 ttl=64 time=1.271 ms
+64 bytes from 192.0.1.10: seq=18 ttl=64 time=1.249 ms
+64 bytes from 192.0.1.10: seq=19 ttl=64 time=2.702 ms
+64 bytes from 192.0.1.10: seq=20 ttl=64 time=4.002 ms
+64 bytes from 192.0.1.10: seq=21 ttl=64 time=1.354 ms
+64 bytes from 192.0.1.10: seq=22 ttl=64 time=1.375 ms
+64 bytes from 192.0.1.10: seq=23 ttl=64 time=1.341 ms
+64 bytes from 192.0.1.10: seq=24 ttl=64 time=1.764 ms
+64 bytes from 192.0.1.10: seq=25 ttl=64 time=1.238 ms
+64 bytes from 192.0.1.10: seq=26 ttl=64 time=1.638 ms
+64 bytes from 192.0.1.10: seq=27 ttl=64 time=1.377 ms
+64 bytes from 192.0.1.10: seq=28 ttl=64 time=1.410 ms
+64 bytes from 192.0.1.10: seq=29 ttl=64 time=2.002 ms
+
+--- 192.0.1.10 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 1.142/52.597/1235.067 ms

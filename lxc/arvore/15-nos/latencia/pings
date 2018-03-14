@@ -1,0 +1,88 @@
+79,3 
+2,65 
+0,581 
+0,610 
+0,607 
+0,601 
+0,486 
+0,471 
+0,453 
+0,573 
+0,431 
+0,468 
+0,445 
+0,592 
+0,440 
+0,459 
+0,652 
+0,450 
+0,456 
+0,444 
+0,575 
+0,627 
+0,755 
+0,456 
+0,579 
+0,595 
+0,597 
+0,601 
+0,634 
+0,478 
+
+--- 192,0,1,0 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 29651
+rtt min/avg/max/mdev = 0,431/3,237/79,351/14,139 
+
+
+
+
+
+
+
+
+
+
+
+
+pipe 4
+root@h0:/# ping -c 30 192,0,1,7
+PING 192,0,1,7 (192,0,1,7) 56(84) bytes of data,
+64 bytes from 192,0,1,7: icmp_seq=1 ttl=64 time=115 
+64 bytes from 192,0,1,7: icmp_seq=2 ttl=64 time=4,84 
+64 bytes from 192,0,1,7: icmp_seq=3 ttl=64 time=0,866 
+64 bytes from 192,0,1,7: icmp_seq=4 ttl=64 time=0,883 
+64 bytes from 192,0,1,7: icmp_seq=5 ttl=64 time=1,20 
+64 bytes from 192,0,1,7: icmp_seq=6 ttl=64 time=0,778 
+64 bytes from 192,0,1,7: icmp_seq=7 ttl=64 time=0,831 
+64 bytes from 192,0,1,7: icmp_seq=8 ttl=64 time=0,865 
+64 bytes from 192,0,1,7: icmp_seq=9 ttl=64 time=0,591 
+64 bytes from 192,0,1,7: icmp_seq=10 ttl=64 time=0,595 
+64 bytes from 192,0,1,7: icmp_seq=11 ttl=64 time=0,741 
+64 bytes from 192,0,1,7: icmp_seq=12 ttl=64 time=0,856 
+64 bytes from 192,0,1,7: icmp_seq=13 ttl=64 time=0,583 
+64 bytes from 192,0,1,7: icmp_seq=14 ttl=64 time=0,572 
+64 bytes from 192,0,1,7: icmp_seq=15 ttl=64 time=0,984 
+64 bytes from 192,0,1,7: icmp_seq=16 ttl=64 time=0,584 
+64 bytes from 192,0,1,7: icmp_seq=17 ttl=64 time=0,666 
+64 bytes from 192,0,1,7: icmp_seq=18 ttl=64 time=0,775 
+64 bytes from 192,0,1,7: icmp_seq=19 ttl=64 time=0,754 
+64 bytes from 192,0,1,7: icmp_seq=20 ttl=64 time=0,584 
+64 bytes from 192,0,1,7: icmp_seq=21 ttl=64 time=0,605 
+64 bytes from 192,0,1,7: icmp_seq=22 ttl=64 time=0,870 
+64 bytes from 192,0,1,7: icmp_seq=23 ttl=64 time=0,588 
+64 bytes from 192,0,1,7: icmp_seq=24 ttl=64 time=0,764 
+64 bytes from 192,0,1,7: icmp_seq=25 ttl=64 time=0,581 
+64 bytes from 192,0,1,7: icmp_seq=26 ttl=64 time=0,588 
+64 bytes from 192,0,1,7: icmp_seq=27 ttl=64 time=0,627 
+64 bytes from 192,0,1,7: icmp_seq=28 ttl=64 time=0,770 
+64 bytes from 192,0,1,7: icmp_seq=29 ttl=64 time=1,44 
+64 bytes from 192,0,1,7: icmp_seq=30 ttl=64 time=0,616 
+
+--- 192,0,1,7 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 29512
+rtt min/avg/max/mdev = 0,572/4,718/115,536/20,592 
+
+
+
+
+

@@ -1,0 +1,35 @@
+64 bytes from 192.0.1.7: seq=0 ttl=64 time=779.388 ms
+64 bytes from 192.0.1.7: seq=1 ttl=64 time=27.400 ms
+64 bytes from 192.0.1.7: seq=2 ttl=64 time=14.882 ms
+64 bytes from 192.0.1.7: seq=3 ttl=64 time=0.978 ms
+64 bytes from 192.0.1.7: seq=4 ttl=64 time=0.850 ms
+64 bytes from 192.0.1.7: seq=5 ttl=64 time=0.963 ms
+64 bytes from 192.0.1.7: seq=6 ttl=64 time=3.315 ms
+64 bytes from 192.0.1.7: seq=7 ttl=64 time=0.867 ms
+64 bytes from 192.0.1.7: seq=8 ttl=64 time=1.100 ms
+64 bytes from 192.0.1.7: seq=9 ttl=64 time=1.019 ms
+64 bytes from 192.0.1.7: seq=10 ttl=64 time=0.893 ms
+64 bytes from 192.0.1.7: seq=11 ttl=64 time=0.750 ms
+64 bytes from 192.0.1.7: seq=12 ttl=64 time=0.965 ms
+64 bytes from 192.0.1.7: seq=13 ttl=64 time=1.104 ms
+64 bytes from 192.0.1.7: seq=14 ttl=64 time=0.991 ms
+64 bytes from 192.0.1.7: seq=15 ttl=64 time=0.837 ms
+64 bytes from 192.0.1.7: seq=16 ttl=64 time=1.063 ms
+64 bytes from 192.0.1.7: seq=17 ttl=64 time=0.941 ms
+64 bytes from 192.0.1.7: seq=18 ttl=64 time=0.959 ms
+64 bytes from 192.0.1.7: seq=19 ttl=64 time=0.987 ms
+64 bytes from 192.0.1.7: seq=20 ttl=64 time=1.280 ms
+64 bytes from 192.0.1.7: seq=21 ttl=64 time=1.172 ms
+64 bytes from 192.0.1.7: seq=22 ttl=64 time=0.946 ms
+64 bytes from 192.0.1.7: seq=23 ttl=64 time=1.199 ms
+64 bytes from 192.0.1.7: seq=24 ttl=64 time=1.072 ms
+64 bytes from 192.0.1.7: seq=25 ttl=64 time=0.972 ms
+64 bytes from 192.0.1.7: seq=26 ttl=64 time=0.805 ms
+64 bytes from 192.0.1.7: seq=27 ttl=64 time=1.010 ms
+64 bytes from 192.0.1.7: seq=28 ttl=64 time=0.862 ms
+64 bytes from 192.0.1.7: seq=29 ttl=64 time=0.875 ms
+
+--- 192.0.1.7 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.750/28.348/779.388 ms
+

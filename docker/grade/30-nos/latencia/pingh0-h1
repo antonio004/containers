@@ -1,0 +1,37 @@
+ocker exec h0 ping -c 30 192.0.1.1
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+64 bytes from 192.0.1.1: seq=0 ttl=64 time=1354.993 ms
+64 bytes from 192.0.1.1: seq=1 ttl=64 time=304.418 ms
+64 bytes from 192.0.1.1: seq=2 ttl=64 time=54.027 ms
+64 bytes from 192.0.1.1: seq=3 ttl=64 time=1.389 ms
+64 bytes from 192.0.1.1: seq=4 ttl=64 time=1.521 ms
+64 bytes from 192.0.1.1: seq=5 ttl=64 time=1.412 ms
+64 bytes from 192.0.1.1: seq=6 ttl=64 time=1.479 ms
+64 bytes from 192.0.1.1: seq=7 ttl=64 time=1.745 ms
+64 bytes from 192.0.1.1: seq=8 ttl=64 time=2.083 ms
+64 bytes from 192.0.1.1: seq=9 ttl=64 time=678.634 ms
+64 bytes from 192.0.1.1: seq=10 ttl=64 time=1.473 ms
+64 bytes from 192.0.1.1: seq=11 ttl=64 time=3.946 ms
+64 bytes from 192.0.1.1: seq=12 ttl=64 time=1.550 ms
+64 bytes from 192.0.1.1: seq=13 ttl=64 time=1.504 ms
+64 bytes from 192.0.1.1: seq=14 ttl=64 time=1.437 ms
+64 bytes from 192.0.1.1: seq=15 ttl=64 time=1.678 ms
+64 bytes from 192.0.1.1: seq=16 ttl=64 time=5.279 ms
+64 bytes from 192.0.1.1: seq=17 ttl=64 time=1.348 ms
+64 bytes from 192.0.1.1: seq=18 ttl=64 time=1.560 ms
+64 bytes from 192.0.1.1: seq=19 ttl=64 time=1.402 ms
+64 bytes from 192.0.1.1: seq=20 ttl=64 time=6.885 ms
+64 bytes from 192.0.1.1: seq=21 ttl=64 time=3.073 ms
+64 bytes from 192.0.1.1: seq=22 ttl=64 time=1.281 ms
+64 bytes from 192.0.1.1: seq=23 ttl=64 time=1.370 ms
+64 bytes from 192.0.1.1: seq=24 ttl=64 time=1.505 ms
+64 bytes from 192.0.1.1: seq=25 ttl=64 time=1.609 ms
+64 bytes from 192.0.1.1: seq=26 ttl=64 time=1.700 ms
+64 bytes from 192.0.1.1: seq=27 ttl=64 time=1.938 ms
+64 bytes from 192.0.1.1: seq=28 ttl=64 time=1.485 ms
+64 bytes from 192.0.1.1: seq=29 ttl=64 time=4.545 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 1.281/81.608/1354.993 ms
+

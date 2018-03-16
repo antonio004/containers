@@ -1,6 +1,3 @@
-start(){
-docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 sw15 sw16 sw17 sw18 sw19 sw20 sw21 sw22 sw23 sw24 sw25 sw26 sw27 sw28 sw29 sw30 h0 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11 h12 h13 h14 h15
-}
 run(){
 # $s = numero de switch's
 # $h = numero de host's
@@ -9,12 +6,16 @@ run(){
 i=0
 s=31
 #laço que cria os switchs
+docker stop onos
+docker rm onos
+cont=$(docker create --name onos -it --net=sdn onosproject/onos)
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
-   docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+   
+      sw$i=$(docker create --name sw$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
    else
    echo "O container sw$i já existe"
    echo ""
@@ -37,7 +38,7 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-   docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+      ht$i=$(docker create --name h$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
    else
    echo "O container sw$i já existe"
    echo ""
@@ -48,7 +49,12 @@ echo ""
 echo "Host's Criados com Sucesso"
 echo ""
 }
- 
+
+start(){
+docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 sw15 sw16 sw17 sw18 sw19 sw20 sw21 sw22 sw23 sw24 sw25 sw26 sw27 sw28 sw29 sw30 h0 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11 h12 h13 h14 h15
+}
+
+
 conf-sw(){
 s=31
 i=0 #seta variavel como zero novamente
@@ -374,7 +380,7 @@ teste(){
 
 }
 
-#run
+run
 start
 conf-sw
 conf-host

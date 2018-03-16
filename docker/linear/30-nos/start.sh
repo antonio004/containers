@@ -1,6 +1,4 @@
-start(){
-docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 sw15 sw16 sw17 sw18 sw19 sw20 sw21 sw22 sw23 sw24 sw25 sw26 sw27 sw28 sw29 sw30 h0 h1
-}
+
 run(){
 # $s = numero de switch's
 # $h = numero de host's
@@ -80,6 +78,10 @@ done
 
 echo "Host's Configurados"
 echo ""
+}
+
+start(){
+docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 sw15 sw16 sw17 sw18 sw19 sw20 sw21 sw22 sw23 sw24 sw25 sw26 sw27 sw28 sw29 h0 h1
 }
 
 links(){
@@ -275,11 +277,11 @@ echo "Estabelecendo Link com os Host's"
 echo ""
 
 #sw0 x h0
-docker exec sw0 ovs-vsctl add-port s0 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.32
+docker exec sw0 ovs-vsctl add-port s0 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.31
 docker exec h0 ovs-vsctl add-port h0 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.1
 
 #sw29 x h1
-docker exec sw29 ovs-vsctl add-port s29 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.33
+docker exec sw29 ovs-vsctl add-port s29 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.32
 docker exec h1 ovs-vsctl add-port h1 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.30
 
 
@@ -308,9 +310,9 @@ teste4(){
 )
 }
 
-#run
+run
 start
 conf-sw
 conf-host
 links
-teste
+#teste

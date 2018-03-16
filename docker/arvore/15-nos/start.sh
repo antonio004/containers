@@ -1,6 +1,3 @@
-start(){
-docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 sw15 sw16 sw17 sw18 sw19 sw20 sw21 sw22 sw23 sw24 sw25 sw26 sw27 sw28 sw29 sw30 h0 h1 h2 h3 h4 h5 h6 h7 h8
-}
 run(){
 # $s = numero de switch's
 # $h = numero de host's
@@ -9,12 +6,16 @@ run(){
 i=0
 s=15
 #laço que cria os switchs
+docker stop onos
+docker rm onos
+cont=$(docker create --name onos -it --net=sdn onosproject/onos)
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
-   docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+   
+      sw$i=$(docker create --name sw$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
    else
    echo "O container sw$i já existe"
    echo ""
@@ -37,7 +38,7 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-   docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+      ht$i=$(docker create --name h$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
    else
    echo "O container sw$i já existe"
    echo ""
@@ -47,6 +48,10 @@ done
 echo ""
 echo "Host's Criados com Sucesso"
 echo ""
+}
+
+start(){
+docker start sw0 sw1 sw2 sw3 sw4 sw5 sw6 sw7 sw8 sw9 sw10 sw11 sw12 sw13 sw14 h0 h1 h2 h3 h4 h5 h6 h7 
 }
  
 conf-sw(){
@@ -158,35 +163,35 @@ echo "Estabelecendo links com os Hosts"
 echo " "
 
 #sw6 x h0
-docker exec sw6 ovs-vsctl add-port s6 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.32
+docker exec sw6 ovs-vsctl add-port s6 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.16
 docker exec h0 ovs-vsctl add-port h0 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.7
 
 #sw7 x h1
-docker exec sw7 ovs-vsctl add-port s7 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.33
+docker exec sw7 ovs-vsctl add-port s7 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.17
 docker exec h1 ovs-vsctl add-port h1 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.8
 
 #sw4 x h2
-docker exec sw4 ovs-vsctl add-port s4 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.34
+docker exec sw4 ovs-vsctl add-port s4 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.18
 docker exec h2 ovs-vsctl add-port h2 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.5
 
 #sw3 x h3
-docker exec sw3 ovs-vsctl add-port s3 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.35
+docker exec sw3 ovs-vsctl add-port s3 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.19
 docker exec h3 ovs-vsctl add-port h3 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.4
 
 #sw10 x h4
-docker exec sw10 ovs-vsctl add-port s10 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.36
+docker exec sw10 ovs-vsctl add-port s10 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.20
 docker exec h4 ovs-vsctl add-port h4 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.11
 
 #sw11 x h5
-docker exec sw11 ovs-vsctl add-port s11 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.37
+docker exec sw11 ovs-vsctl add-port s11 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.21
 docker exec h5 ovs-vsctl add-port h5 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.12
 
 #sw13 x h6
-docker exec sw13 ovs-vsctl add-port s13 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.38
+docker exec sw13 ovs-vsctl add-port s13 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.22
 docker exec h6 ovs-vsctl add-port h6 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.14
 
 #sw14 x h7
-docker exec sw14 ovs-vsctl add-port s14 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.39
+docker exec sw14 ovs-vsctl add-port s14 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.23
 docker exec h7 ovs-vsctl add-port h7 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.15
 }
 teste(){
@@ -195,7 +200,7 @@ teste(){
 
 }
 
-#run
+run
 start
 conf-sw
 conf-host

@@ -2,16 +2,16 @@
 echo "Contador cpu$" >>"cpu-linear5-total-docker".ods
 i=0
 tempo=300
-c="ff02d2f802a0c217bcc6dee525432754f8d6dc897867a7302d2afea288a2811c"
-s0="c1a5687257beff51c67b4057ddfaf96eb55459b8dbd9241cc24f4e9fbe110441"
-s1="489c50e5237a5a12774ee73b125d4162bf8b844d3b2323188c4b2ebe158d6a6a"
-s2="1413315ae9fd3777aa9be86686f80978ecf0fdac967bea340adfb0574c808115"
-s3="28445e43fca4503dde4ba0eaaae0de69d51344d28b43e301ea7f31f3eb23fe11"
-s4="f05dbea2e4f0b2229ae3c2c0fed0dd2c22622aa542d504291015edd0d7f6901f"
+c=`echo $cont`
+s0=`echo $sw0`
+s1=`echo $sw1`
+s2=`echo $sw2`
+s3=`echo $sw3`
+s4=`echo $sw4`
 
+h0=`echo $ht0`
+h1=`echo $ht1`
 
-h0="43e28a9bb302f35b0830b3535241f179ed1b27c6c836662df7c0b033edd7c130"
-h1="fe54361aa53db138ae440bb37027e5212791cd84da947a19ac20b462c688cd41"
 
 
 intervalo=1000000000

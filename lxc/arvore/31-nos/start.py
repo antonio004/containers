@@ -25,7 +25,8 @@ while(i<s):
   if not c.defined:
     c.create("download", lxc.LXC_CREATE_QUIET, {"dist": "ubuntu","release": "xenial","arch": "amd64"})
     print("Container Criado sw"+str(i)+"\n")
-    print("Configurando o ovs do  sw"+str(i)+"\n")
+    c.attach_wait(lxc.attach_run_command, ["apt-get", "update"])
+    c.attach_wait(lxc.attach_run_command, ["apt-get", "install", "-y", "openvswitch-switch"])
   else:
     c.start()
     print("Container SW"+str(i)+" iniciado.")
@@ -47,9 +48,9 @@ while(i<h):
   if not c.defined:
     c.create("download", lxc.LXC_CREATE_QUIET, {"dist": "ubuntu","release": "xenial","arch": "amd64"})
     print("Container Criado h"+str(i)+"\n")
-    print("Configurando host_"+str(i)+"\n")
-    c.start()
-    c.get_ips(timeout=30)
+    #print("Configurando host_"+str(i)+"\n")
+    #c.start()
+    #c.get_ips(timeout=30)
     c.attach_wait(lxc.attach_run_command, ["apt-get", "update"])
     c.attach_wait(lxc.attach_run_command, ["apt-get", "install", "-y", "openvswitch-switch"])
   else:

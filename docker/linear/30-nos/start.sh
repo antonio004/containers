@@ -12,10 +12,10 @@ do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
-   docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+    docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+    echo "O container sw$i já existe"
+    echo ""
    i=`expr $i + 1`
    fi
 done
@@ -35,10 +35,10 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-   docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+    docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+    echo "O container sw$i já existe"
+    echo ""
    fi
    i=`expr $i + 1`
 done
@@ -288,10 +288,10 @@ docker exec h1 ovs-vsctl add-port h1 gre0 -- set interface gre0 type=gre options
 }
 
 teste(){
-docker exec h0 ping -c 100 192.0.1.1
-docker exec h1 ping -c 100 192.0.1.0
-docker exec h0 ping -c 100 192.0.1.1
-docker exec h1 ping -c 100 192.0.1.0
+sleep 15
+echo "Verificando Conexão"
+echo ""
+   docker exec h0 ping -c 30 192.0.1.1 >> latencia-ping
 }
 
 teste4(){
@@ -315,4 +315,4 @@ start
 conf-sw
 conf-host
 links
-#teste
+teste

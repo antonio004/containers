@@ -6,19 +6,20 @@ run(){
 i=0
 s=30
 #laço que cria os switchs
-docker stop onos
-docker rm onos
-cont=$(docker create --name onos -it --net=sdn onosproject/onos)
+#docker stop onos
+#docker rm onos
+#cont=$(docker create --name onos -it --net=sdn onosproject/onos)
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
    
-      sw$i=$(docker create --name sw$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+    docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+    echo "O container sw$i já existe"
+    echo ""
+    docker start sw$i
    i=`expr $i + 1`
    fi
 done
@@ -38,10 +39,11 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-      ht$i=$(docker create --name h$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+    docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+    echo "O container sw$i já existe"
+    echo ""
+    docker start h$i
    fi
    i=`expr $i + 1`
 done
@@ -385,12 +387,16 @@ teste1(){
 }
 
 teste(){
-docker exec h0 ping -c 30 192.0.1.1
-docker exec h1 ping -c 30 192.0.1.0
+  sleep 15
+  echo "Verificando Conexão"
+  echo ""
+   docker exec h0 ping -c 30 192.0.1.1 >> latencia-ping
 }
+
+
 run
 start
 conf-sw
 conf-host
 links
-#teste
+teste

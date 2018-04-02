@@ -4,17 +4,17 @@ run(){
 # $i = contador
 
 i=0
-s=7
+s=5
 #laço que cria os switchs
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
-   docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+      docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    i=`expr $i + 1`
    fi
 done
@@ -34,10 +34,10 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-   docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
+      docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    fi
    i=`expr $i + 1`
 done
@@ -51,7 +51,7 @@ docker start sw0 sw1 sw2 sw3 sw4 h0 h1
 }
  
 conf-sw(){
-s=7
+s=5
 i=0 #seta variavel como zero novamente
 echo "Configurando Switch's"
 echo ""
@@ -104,39 +104,31 @@ docker exec sw3 ovs-vsctl add-port s3 gre0 -- set interface gre0 type=gre option
 docker exec sw3 ovs-vsctl add-port s3 gre1 -- set interface gre1 type=gre options:remote_ip=172.28.5.5
 docker exec sw4 ovs-vsctl add-port s4 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.4
 
-#sw4 x sw5
-docker exec sw4 ovs-vsctl add-port s4 gre1 -- set interface gre1 type=gre options:remote_ip=172.28.5.6
-docker exec sw5 ovs-vsctl add-port s5 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.5
-
-#sw5 x sw6
-docker exec sw5 ovs-vsctl add-port s5 gre1 -- set interface gre1 type=gre options:remote_ip=172.28.5.7
-docker exec sw6 ovs-vsctl add-port s6 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.6
-
-#sw6 x sw7
-docker exec sw6 ovs-vsctl add-port s6 gre1 -- set interface gre1 type=gre options:remote_ip=172.28.5.8
-docker exec sw7 ovs-vsctl add-port s7 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.7
-
-#sw7 x sw8
-docker exec sw5 ovs-vsctl add-port s7 gre1 -- set interface gre1 type=gre options:remote_ip=172.28.5.9
-docker exec sw6 ovs-vsctl add-port s8 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.8
-
 
 echo "Estabelecendo links Com os Hosts"
 echo ""
 
 #sw0 x h0
-docker exec sw0 ovs-vsctl add-port s0 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.10
+docker exec sw0 ovs-vsctl add-port s0 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.6
 docker exec h0 ovs-vsctl add-port h0 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.1
 
-#sw8 x h1
-docker exec sw8 ovs-vsctl add-port s8 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.11
-docker exec h1 ovs-vsctl add-port h1 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.9
+#sw4 x h1
+docker exec sw4 ovs-vsctl add-port s4 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.7
+docker exec h1 ovs-vsctl add-port h1 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.5
 }
 
+teste(){
+sleep 15
+echo "Verificando Conexão"
+echo ""
+   docker exec h0 ping -c 30 192.0.1.1 >> latencia-ping
+
+
+}
 
 run
 start
 conf-sw
 conf-host
 links
-#teste
+teste

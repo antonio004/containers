@@ -6,19 +6,17 @@ run(){
 i=0
 s=15
 #laço que cria os switchs
-docker stop onos
-docker rm onos
-cont=$(docker create --name onos -it --net=sdn onosproject/onos)
+
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
    
-      sw$i=$(docker create --name sw$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+      docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    i=`expr $i + 1`
    fi
 done
@@ -38,10 +36,10 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-      ht$i=$(docker create --name h$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+      docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    fi
    i=`expr $i + 1`
 done
@@ -194,9 +192,18 @@ docker exec h6 ovs-vsctl add-port h6 gre0 -- set interface gre0 type=gre options
 docker exec sw14 ovs-vsctl add-port s14 gre10 -- set interface gre10 type=gre options:remote_ip=172.28.5.23
 docker exec h7 ovs-vsctl add-port h7 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.15
 }
+
 teste(){
-   docker exec h0 ping -c3 192.0.1.15
-   docker exec h15 ping -c3 192.0.1.0
+sleep 15
+echo "Verificando Conexão"
+echo ""
+   docker exec h0 ping -c 30 192.0.1.5 >> latencia-ping
+   docker exec h0 ping -c 30 192.0.1.7 >> latencia-ping2
+   docker exec h0 ping -c 5 192.0.1.1
+   docker exec h0 ping -c 5 192.0.1.2
+   docker exec h0 ping -c 5 192.0.1.3
+   docker exec h0 ping -c 5 192.0.1.4
+   docker exec h0 ping -c 5 192.0.1.6
 
 }
 
@@ -205,7 +212,7 @@ start
 conf-sw
 conf-host
 links
-#teste
+teste
 
 
 

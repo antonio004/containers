@@ -6,19 +6,16 @@ run(){
 i=0
 s=31
 #laço que cria os switchs
-docker stop onos
-docker rm onos
-cont=$(docker create --name onos -it --net=sdn onosproject/onos)
 while [ $i -lt $s ]
 do
    echo "Criando Switch sw$i"
    echo ""
    if [ ! "$(docker ps -a | grep sw$i)" ]; then
    
-      sw$i=$(docker create --name sw$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+      docker run --name sw$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    i=`expr $i + 1`
    fi
 done
@@ -38,10 +35,10 @@ do
    echo "Criando host h$i"
    echo ""
    if [ ! "$(docker ps -a | grep h$i)" ]; then
-      ht$i=$(docker create --name h$i --net=sdn -it --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch)
+      docker run --name h$i --net=sdn -itd --cap-add NET_ADMIN --cap-add SYS_MODULE -v /lib/modules:/lib/modules socketplane/openvswitch
    else
-   echo "O container sw$i já existe"
-   echo ""
+      echo "O container sw$i já existe"
+      echo ""
    fi
    i=`expr $i + 1`
 done
@@ -297,15 +294,28 @@ docker exec sw30 ovs-vsctl add-port s30 gre10 -- set interface gre10 type=gre op
 docker exec h15 ovs-vsctl add-port h15 gre0 -- set interface gre0 type=gre options:remote_ip=172.28.5.31
 
 }
-teste1(){
-   docker exec h0 ping -c 15 192.0.1.1
-}
 
-teste2(){
-   docker exec h0 ping -c 15 192.0.1.2
-}
-teste3(){
-   docker exec h0 ping -c 15 192.0.1.3
+
+teste(){
+sleep 15
+echo "Verificando Conexão"
+echo ""
+   docker exec h0 ping -c 30 192.0.1.12 >> latencia-ping
+   docker exec h0 ping -c 30 192.0.1.15 >> latencia-ping2
+   docker exec h0 ping -c 5 192.0.1.1
+   docker exec h0 ping -c 5 192.0.1.2
+   docker exec h0 ping -c 5 192.0.1.3
+   docker exec h0 ping -c 5 192.0.1.4
+   docker exec h0 ping -c 5 192.0.1.5
+   docker exec h0 ping -c 5 192.0.1.6
+   docker exec h0 ping -c 5 192.0.1.7
+   docker exec h0 ping -c 5 192.0.1.8
+   docker exec h0 ping -c 5 192.0.1.9
+   docker exec h0 ping -c 5 192.0.1.10
+   docker exec h0 ping -c 5 192.0.1.11
+   docker exec h0 ping -c 5 192.0.1.13
+   docker exec h0 ping -c 5 192.0.1.14
+
 }
 
 #IPS
@@ -374,15 +384,11 @@ teste3(){
 #h28=172.28.5.60
 #h29=172.28.5.61
 #h30=172.28.5.62
-teste(){
-   docker exec h0 ping -c3 192.0.1.15
-   docker exec h15 ping -c3 192.0.1.0
 
-}
 
 run
 start
 conf-sw
 conf-host
 links
-#teste
+teste

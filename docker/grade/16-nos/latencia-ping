@@ -1,0 +1,78 @@
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 0 packets received, 100% packet loss
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 0 packets received, 100% packet loss
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+64 bytes from 192.0.1.1: seq=0 ttl=64 time=135.919 ms
+64 bytes from 192.0.1.1: seq=1 ttl=64 time=11.949 ms
+64 bytes from 192.0.1.1: seq=2 ttl=64 time=0.402 ms
+64 bytes from 192.0.1.1: seq=3 ttl=64 time=0.401 ms
+64 bytes from 192.0.1.1: seq=4 ttl=64 time=0.329 ms
+64 bytes from 192.0.1.1: seq=5 ttl=64 time=0.320 ms
+64 bytes from 192.0.1.1: seq=6 ttl=64 time=0.588 ms
+64 bytes from 192.0.1.1: seq=7 ttl=64 time=0.390 ms
+64 bytes from 192.0.1.1: seq=8 ttl=64 time=0.401 ms
+64 bytes from 192.0.1.1: seq=9 ttl=64 time=0.308 ms
+64 bytes from 192.0.1.1: seq=10 ttl=64 time=0.332 ms
+64 bytes from 192.0.1.1: seq=11 ttl=64 time=0.311 ms
+64 bytes from 192.0.1.1: seq=12 ttl=64 time=0.407 ms
+64 bytes from 192.0.1.1: seq=13 ttl=64 time=0.388 ms
+64 bytes from 192.0.1.1: seq=14 ttl=64 time=0.328 ms
+64 bytes from 192.0.1.1: seq=15 ttl=64 time=0.384 ms
+64 bytes from 192.0.1.1: seq=16 ttl=64 time=0.389 ms
+64 bytes from 192.0.1.1: seq=17 ttl=64 time=0.364 ms
+64 bytes from 192.0.1.1: seq=18 ttl=64 time=0.347 ms
+64 bytes from 192.0.1.1: seq=19 ttl=64 time=0.361 ms
+64 bytes from 192.0.1.1: seq=20 ttl=64 time=0.421 ms
+64 bytes from 192.0.1.1: seq=21 ttl=64 time=0.525 ms
+64 bytes from 192.0.1.1: seq=22 ttl=64 time=0.359 ms
+64 bytes from 192.0.1.1: seq=23 ttl=64 time=0.373 ms
+64 bytes from 192.0.1.1: seq=24 ttl=64 time=0.402 ms
+64 bytes from 192.0.1.1: seq=25 ttl=64 time=0.359 ms
+64 bytes from 192.0.1.1: seq=26 ttl=64 time=0.374 ms
+64 bytes from 192.0.1.1: seq=27 ttl=64 time=0.681 ms
+64 bytes from 192.0.1.1: seq=28 ttl=64 time=0.481 ms
+64 bytes from 192.0.1.1: seq=29 ttl=64 time=0.464 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.308/5.301/135.919 ms
+PING 192.0.1.1 (192.0.1.1): 56 data bytes
+64 bytes from 192.0.1.1: seq=0 ttl=64 time=179.674 ms
+64 bytes from 192.0.1.1: seq=1 ttl=64 time=15.355 ms
+64 bytes from 192.0.1.1: seq=2 ttl=64 time=0.624 ms
+64 bytes from 192.0.1.1: seq=3 ttl=64 time=0.278 ms
+64 bytes from 192.0.1.1: seq=4 ttl=64 time=0.278 ms
+64 bytes from 192.0.1.1: seq=5 ttl=64 time=0.478 ms
+64 bytes from 192.0.1.1: seq=6 ttl=64 time=0.487 ms
+64 bytes from 192.0.1.1: seq=7 ttl=64 time=0.422 ms
+64 bytes from 192.0.1.1: seq=8 ttl=64 time=0.264 ms
+64 bytes from 192.0.1.1: seq=9 ttl=64 time=0.462 ms
+64 bytes from 192.0.1.1: seq=10 ttl=64 time=0.424 ms
+64 bytes from 192.0.1.1: seq=11 ttl=64 time=0.358 ms
+64 bytes from 192.0.1.1: seq=12 ttl=64 time=0.285 ms
+64 bytes from 192.0.1.1: seq=13 ttl=64 time=0.261 ms
+64 bytes from 192.0.1.1: seq=14 ttl=64 time=0.283 ms
+64 bytes from 192.0.1.1: seq=15 ttl=64 time=0.440 ms
+64 bytes from 192.0.1.1: seq=16 ttl=64 time=0.416 ms
+64 bytes from 192.0.1.1: seq=17 ttl=64 time=0.308 ms
+64 bytes from 192.0.1.1: seq=18 ttl=64 time=0.376 ms
+64 bytes from 192.0.1.1: seq=19 ttl=64 time=0.305 ms
+64 bytes from 192.0.1.1: seq=20 ttl=64 time=0.536 ms
+64 bytes from 192.0.1.1: seq=21 ttl=64 time=0.404 ms
+64 bytes from 192.0.1.1: seq=22 ttl=64 time=0.312 ms
+64 bytes from 192.0.1.1: seq=23 ttl=64 time=0.351 ms
+64 bytes from 192.0.1.1: seq=24 ttl=64 time=0.345 ms
+64 bytes from 192.0.1.1: seq=25 ttl=64 time=0.374 ms
+64 bytes from 192.0.1.1: seq=26 ttl=64 time=0.299 ms
+64 bytes from 192.0.1.1: seq=27 ttl=64 time=0.349 ms
+64 bytes from 192.0.1.1: seq=28 ttl=64 time=0.253 ms
+64 bytes from 192.0.1.1: seq=29 ttl=64 time=0.299 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 packets received, 0% packet loss
+round-trip min/avg/max = 0.253/6.843/179.674 ms

@@ -8,7 +8,7 @@ do
 	docker exec sw$i ovs-vsctl del-br s$i
 	docker stop sw$i
 	#docker stop h$i
-	docker rm sw$i 
+	#docker rm sw$i 
    i=`expr $i + 1`
 done
 }
@@ -20,7 +20,7 @@ do
 	docker exec h$i ovs-vsctl del-br h$i
 	#docker stop sw$i h$i
 	docker stop h$i
-	ocker rm sw$i h$i
+	#docker rm sw$i h$i
    i=`expr $i + 1`
 done
 }

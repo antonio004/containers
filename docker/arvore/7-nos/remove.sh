@@ -6,7 +6,7 @@ s=7
 while [ $i -lt $s ]
 do
 	docker exec sw$i ovs-vsctl del-br s$i
-	docker stop sw$i h$i
+	docker stop sw$i
 	#docker stop h$i
 	#docker rm sw$i h$i
    i=`expr $i + 1`

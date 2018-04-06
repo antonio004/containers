@@ -1,0 +1,115 @@
+mininet> h1 ping h2
+PING 192.0.1.1 (192.0.1.1) 56(84) bytes of data.
+64 bytes from 192.0.1.1: icmp_seq=1 ttl=64 time=1104 ms
+64 bytes from 192.0.1.1: icmp_seq=2 ttl=64 time=98.7 ms
+64 bytes from 192.0.1.1: icmp_seq=3 ttl=64 time=0.784 ms
+64 bytes from 192.0.1.1: icmp_seq=4 ttl=64 time=0.144 ms
+64 bytes from 192.0.1.1: icmp_seq=5 ttl=64 time=0.219 ms
+64 bytes from 192.0.1.1: icmp_seq=6 ttl=64 time=0.235 ms
+64 bytes from 192.0.1.1: icmp_seq=7 ttl=64 time=0.234 ms
+64 bytes from 192.0.1.1: icmp_seq=8 ttl=64 time=0.222 ms
+64 bytes from 192.0.1.1: icmp_seq=9 ttl=64 time=0.124 ms
+64 bytes from 192.0.1.1: icmp_seq=10 ttl=64 time=0.241 ms
+64 bytes from 192.0.1.1: icmp_seq=11 ttl=64 time=0.156 ms
+64 bytes from 192.0.1.1: icmp_seq=12 ttl=64 time=0.202 ms
+64 bytes from 192.0.1.1: icmp_seq=13 ttl=64 time=0.233 ms
+64 bytes from 192.0.1.1: icmp_seq=14 ttl=64 time=0.131 ms
+64 bytes from 192.0.1.1: icmp_seq=15 ttl=64 time=0.234 ms
+64 bytes from 192.0.1.1: icmp_seq=16 ttl=64 time=0.245 ms
+64 bytes from 192.0.1.1: icmp_seq=17 ttl=64 time=0.161 ms
+64 bytes from 192.0.1.1: icmp_seq=18 ttl=64 time=0.224 ms
+64 bytes from 192.0.1.1: icmp_seq=19 ttl=64 time=0.130 ms
+64 bytes from 192.0.1.1: icmp_seq=20 ttl=64 time=0.139 ms
+64 bytes from 192.0.1.1: icmp_seq=21 ttl=64 time=0.191 ms
+64 bytes from 192.0.1.1: icmp_seq=22 ttl=64 time=0.228 ms
+64 bytes from 192.0.1.1: icmp_seq=23 ttl=64 time=0.173 ms
+64 bytes from 192.0.1.1: icmp_seq=24 ttl=64 time=0.107 ms
+64 bytes from 192.0.1.1: icmp_seq=25 ttl=64 time=0.227 ms
+64 bytes from 192.0.1.1: icmp_seq=26 ttl=64 time=0.111 ms
+64 bytes from 192.0.1.1: icmp_seq=27 ttl=64 time=0.124 ms
+64 bytes from 192.0.1.1: icmp_seq=28 ttl=64 time=0.207 ms
+64 bytes from 192.0.1.1: icmp_seq=29 ttl=64 time=0.106 ms
+64 bytes from 192.0.1.1: icmp_seq=30 ttl=64 time=0.222 ms
+64 bytes from 192.0.1.1: icmp_seq=31 ttl=64 time=0.187 ms
+64 bytes from 192.0.1.1: icmp_seq=32 ttl=64 time=0.166 ms
+64 bytes from 192.0.1.1: icmp_seq=33 ttl=64 time=0.236 ms
+^C
+--- 192.0.1.1 ping statistics ---
+33 packets transmitted, 33 received, 0% packet loss, time 32009ms
+rtt min/avg/max/mdev = 0.106/36.658/1104.672/189.553 ms, pipe 2
+
+mininet> h1 ping h2
+PING 192.0.1.1 (192.0.1.1) 56(84) bytes of data.
+64 bytes from 192.0.1.1: icmp_seq=1 ttl=64 time=154 ms
+64 bytes from 192.0.1.1: icmp_seq=2 ttl=64 time=1.73 ms
+64 bytes from 192.0.1.1: icmp_seq=3 ttl=64 time=0.105 ms
+64 bytes from 192.0.1.1: icmp_seq=4 ttl=64 time=0.139 ms
+64 bytes from 192.0.1.1: icmp_seq=5 ttl=64 time=0.216 ms
+64 bytes from 192.0.1.1: icmp_seq=6 ttl=64 time=0.168 ms
+64 bytes from 192.0.1.1: icmp_seq=7 ttl=64 time=0.224 ms
+64 bytes from 192.0.1.1: icmp_seq=8 ttl=64 time=0.122 ms
+64 bytes from 192.0.1.1: icmp_seq=9 ttl=64 time=0.208 ms
+64 bytes from 192.0.1.1: icmp_seq=10 ttl=64 time=0.107 ms
+64 bytes from 192.0.1.1: icmp_seq=11 ttl=64 time=0.223 ms
+64 bytes from 192.0.1.1: icmp_seq=12 ttl=64 time=0.105 ms
+64 bytes from 192.0.1.1: icmp_seq=13 ttl=64 time=0.178 ms
+64 bytes from 192.0.1.1: icmp_seq=14 ttl=64 time=0.129 ms
+64 bytes from 192.0.1.1: icmp_seq=15 ttl=64 time=0.231 ms
+64 bytes from 192.0.1.1: icmp_seq=16 ttl=64 time=0.141 ms
+64 bytes from 192.0.1.1: icmp_seq=17 ttl=64 time=0.225 ms
+64 bytes from 192.0.1.1: icmp_seq=18 ttl=64 time=0.163 ms
+64 bytes from 192.0.1.1: icmp_seq=19 ttl=64 time=0.130 ms
+64 bytes from 192.0.1.1: icmp_seq=20 ttl=64 time=0.119 ms
+64 bytes from 192.0.1.1: icmp_seq=21 ttl=64 time=0.181 ms
+64 bytes from 192.0.1.1: icmp_seq=22 ttl=64 time=0.135 ms
+64 bytes from 192.0.1.1: icmp_seq=23 ttl=64 time=0.211 ms
+64 bytes from 192.0.1.1: icmp_seq=24 ttl=64 time=0.218 ms
+64 bytes from 192.0.1.1: icmp_seq=25 ttl=64 time=0.221 ms
+64 bytes from 192.0.1.1: icmp_seq=26 ttl=64 time=0.197 ms
+64 bytes from 192.0.1.1: icmp_seq=27 ttl=64 time=0.228 ms
+64 bytes from 192.0.1.1: icmp_seq=28 ttl=64 time=0.116 ms
+64 bytes from 192.0.1.1: icmp_seq=29 ttl=64 time=0.199 ms
+64 bytes from 192.0.1.1: icmp_seq=30 ttl=64 time=0.130 ms
+^C
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 28999ms
+rtt min/avg/max/mdev = 0.105/5.357/154.221/27.644 ms
+
+
+mininet> h1 ping -c 30 h2
+PING 192.0.1.1 (192.0.1.1) 56(84) bytes of data.
+64 bytes from 192.0.1.1: icmp_seq=1 ttl=64 time=61.0 ms
+64 bytes from 192.0.1.1: icmp_seq=2 ttl=64 time=2.37 ms
+64 bytes from 192.0.1.1: icmp_seq=3 ttl=64 time=0.236 ms
+64 bytes from 192.0.1.1: icmp_seq=4 ttl=64 time=0.229 ms
+64 bytes from 192.0.1.1: icmp_seq=5 ttl=64 time=0.193 ms
+64 bytes from 192.0.1.1: icmp_seq=6 ttl=64 time=0.190 ms
+64 bytes from 192.0.1.1: icmp_seq=7 ttl=64 time=0.162 ms
+64 bytes from 192.0.1.1: icmp_seq=8 ttl=64 time=0.212 ms
+64 bytes from 192.0.1.1: icmp_seq=9 ttl=64 time=0.197 ms
+64 bytes from 192.0.1.1: icmp_seq=10 ttl=64 time=0.229 ms
+64 bytes from 192.0.1.1: icmp_seq=11 ttl=64 time=0.102 ms
+64 bytes from 192.0.1.1: icmp_seq=12 ttl=64 time=0.211 ms
+64 bytes from 192.0.1.1: icmp_seq=13 ttl=64 time=0.179 ms
+64 bytes from 192.0.1.1: icmp_seq=14 ttl=64 time=0.230 ms
+64 bytes from 192.0.1.1: icmp_seq=15 ttl=64 time=0.172 ms
+64 bytes from 192.0.1.1: icmp_seq=16 ttl=64 time=0.214 ms
+64 bytes from 192.0.1.1: icmp_seq=17 ttl=64 time=0.268 ms
+64 bytes from 192.0.1.1: icmp_seq=18 ttl=64 time=0.213 ms
+64 bytes from 192.0.1.1: icmp_seq=19 ttl=64 time=0.170 ms
+64 bytes from 192.0.1.1: icmp_seq=20 ttl=64 time=0.226 ms
+64 bytes from 192.0.1.1: icmp_seq=21 ttl=64 time=0.184 ms
+64 bytes from 192.0.1.1: icmp_seq=22 ttl=64 time=0.187 ms
+64 bytes from 192.0.1.1: icmp_seq=23 ttl=64 time=0.175 ms
+64 bytes from 192.0.1.1: icmp_seq=24 ttl=64 time=0.219 ms
+64 bytes from 192.0.1.1: icmp_seq=25 ttl=64 time=0.186 ms
+64 bytes from 192.0.1.1: icmp_seq=26 ttl=64 time=0.210 ms
+64 bytes from 192.0.1.1: icmp_seq=27 ttl=64 time=0.141 ms
+64 bytes from 192.0.1.1: icmp_seq=28 ttl=64 time=0.200 ms
+64 bytes from 192.0.1.1: icmp_seq=29 ttl=64 time=0.134 ms
+64 bytes from 192.0.1.1: icmp_seq=30 ttl=64 time=0.179 ms
+
+--- 192.0.1.1 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 29000ms
+rtt min/avg/max/mdev = 0.102/2.296/61.081/10.923 ms
+

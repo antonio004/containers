@@ -1,7 +1,7 @@
 # /bin/bash
 echo "Contador cpu$" #>>"cpu-rnp".ods
 i=0
-c="d8ab679bb88170486549a833e45b13501259173ff4355a7833c4957e2fe0e858"
+c="d4d60be070c2cc4841bb26fbd3f49051364dd692dc0895337c5fea546489852e"
 
 
 intervalo=1000000000

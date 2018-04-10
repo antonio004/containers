@@ -19,7 +19,7 @@ while(i<s):
   c = lxc.Container("sw"+str(i)) 
   c.start()
   c.attach_wait(lxc.attach_run_command, ["ovs-vsctl", "del-br", "s"+str(i)])
-  c.stop()
+ # c.stop()
   i = i+1
 
 i=0
@@ -31,7 +31,7 @@ while(i<h):
   
    #c.attach_wait(lxc.attach_run_command, ["apt-get", "install", "net-tools"])
   c.attach_wait(lxc.attach_run_command, ["ovs-vsctl", "del-br", "h"+str(i)])
-  c.stop()
+  #c.stop()
   i = i+1  
 
 print("Configuracao removida")

@@ -19,7 +19,7 @@ while(i<s):
   c = lxc.Container("sw"+str(i)) 
   c.start()
   c.attach_wait(lxc.attach_run_command, ["ovs-vsctl", "del-br", "s"+str(i)])
- # c.stop()
+  #c.stop()
   i = i+1
 
 i=0
